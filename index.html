@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Popup</title>
+    <link rel="stylesheet" href="./css.css" />
+    <script>
+      let popup;
+
+      function openPopup() {
+        popup = window.open("", "Popup", "width=300,height=300");
+
+        popup.document.write('<div class="popup" >');
+        popup.document.write("<h1>you opened a window</h1>");
+        popup.document.write("<p>popup window.</p>");
+        popup.document.write('<button onclick="window.close()">close</button>');
+        popup.document.write("</div>");
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="openPopup()">open popup window</button>
+  </body>
+</html>
